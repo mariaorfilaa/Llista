@@ -1,8 +1,44 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:coral;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin:30px auto;
+}
+
 img{
-    width: 10%;
-    display: block;
+    width: 80%;
+    margin: 0 auto;
+    position: center;
+}
+input{
+    color:rgb(197, 62, 12);
+    background-color: rgb(247, 149, 113);
+    border-color:  rgb(150, 30, 9);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px 0;
 }
 body{
     text-align: center;
     background-color: coral;
+}
+button{
+    background-color: rgb(255, 223, 142);
+    border-color:  rgb(150, 30, 9);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px 0;
 }
