@@ -1,8 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase, ref, push} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
-const input = document.getElementbyId("inputField")
-const boto =  document.getElementbyId("afegir")
+const input = document.getElementById("inputField")
+const boto =  document.getElementById("afegir")
 
 const appConfiguracio = {
     databaseURL: "https://llista-428ab-default-rtdb.europe-west1.firebasedatabase.app/"
