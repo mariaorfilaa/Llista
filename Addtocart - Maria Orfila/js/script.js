@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref, push, onValue} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const input = document.getElementById("inputField")
 const boto =  document.getElementById("afegir")
@@ -16,10 +16,25 @@ const li = ref(baseDades);
 
 boto.addEventListener("click", function (){
     push (task, input.value)
-    lista.innerHTML += `<li>${input.value}</li>`;
-    input.value = ""
 
+    addElement (input);
+    clearScreen();
 })
+
+function addElement (e){
+    lista.innerHTML += `<li>${e}</li>`;
+}
+function clearScreen (){
+    input.value = ""
+}
+onValue (task, function (snapshot){
+    let resultats = Object.values (snapshot.val ())
+    for (let i = 0; i < resultats.length; i++) {
+        let current = resultats[i]
+        addElement(current)
+    }  
+})
+
 
 
 

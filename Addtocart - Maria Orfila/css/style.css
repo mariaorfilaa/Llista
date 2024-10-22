@@ -41,4 +41,19 @@ button{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     margin: 10px 0;
+
+}
+li{
+    list-style: none;
+    background-color: rgb(255, 255, 254);
+    padding: 10px;
+    position: relative;
+    border-radius: 8px;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 8px 0;
+}
+ul{
+    padding-left: 0px;
 }
