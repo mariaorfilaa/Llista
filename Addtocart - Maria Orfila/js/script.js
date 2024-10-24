@@ -16,24 +16,35 @@ const li = ref(baseDades);
 
 boto.addEventListener("click", function (){
     push (task, input.value)
-
-    addElement (input);
     clearScreen();
 })
 
 function addElement (e){
-    lista.innerHTML += `<li>${e}</li>`;
+    let elementLlista = document.createElement ("li");
+    elementLlista.id=e[0]
+    elementLlista.textContent=e[1]
+    lista.append (elementLlista)
 }
 function clearScreen (){
     input.value = ""
 }
+function clearList (){
+    lista.innerHTML = ""
+}
 onValue (task, function (snapshot){
-    let resultats = Object.values (snapshot.val ())
+    let resultats = Object.entries (snapshot.val ())
+    clearList()
     for (let i = 0; i < resultats.length; i++) {
         let current = resultats[i]
-        addElement(current)
+        addElement(resultats[i])
     }  
 })
+
+
+
+
+
+
 
 
 
